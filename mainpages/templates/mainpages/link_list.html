@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>{{ category_name }}</h1>
+    <p>{{ category_description|safe }}</p>
+
+    {% if link_list %}
+    <ul>
+        {% for link in link_list %}
+            <li>
+                <a href="{{ link.link_url }}">{{ link.display_name }}</a> &mdash; {{ link.description }}
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Nothing on this page yet! Please check back later!</p>
+    {% endif %}
+{% endblock %}

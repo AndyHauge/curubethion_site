@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block title %}<title>Curubethion</title>{% endblock %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="Curubethion: Design, Art, Invention">
+        <meta property="og:url" content="http://curubethion.com">
+        <meta property="og:image" content="https://objects-us-east-1.dream.io/curubethionsite/curubethion_screenshot.png">
+        <meta property="og:description" content="Digital art, puzzle design, tabletop games, and more!"
+        <!--static CSS file-->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/mobile_styles.css' %}" media="all and (max-width: 480px)" type="text/css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                {% block menu %}
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        {% for cat in categories %}
+                        <li><a href="{% url 'category-list-view' name=cat.slug_name %}">{{ cat.display_name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                {% endblock %}
+                <div class="title">Curubethion</div>
+            </header>
+            <main>
+                {% block content %}
+                {% endblock %}
+            </main>
+            <footer>
+                <p>Website design by Andrew Hauge. All art in the Gallery is &copy;2022 by Andrew Hauge.</p>
+            </footer>
+        </div>
+    </body>
+</html>

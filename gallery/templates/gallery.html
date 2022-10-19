@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>Gallery</h1>
+<article id="gallery-content">
+<div class="button-stack"><button class="prev-btn">Prev</button>
+<button class="next-btn">Next</button></div>
+
+<div id="gallery-frame">Loading...</div>
+
+</article>
+
+{% load static %}
+<script src="{% static 'gallery.js' %}"></script>
+{% endblock %}
