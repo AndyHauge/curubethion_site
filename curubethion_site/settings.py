@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainpages.apps.MainpagesConfig',
     'gallery.apps.GalleryConfig',
+    'javascript.apps.JavascriptConfig',
 ]
 
 MIDDLEWARE = [

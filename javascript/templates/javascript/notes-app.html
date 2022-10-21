@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/notes.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+<p><a href="{% url 'js-landing' %}">back to Javascript apps</a></p>
+
+<p>Click and drag to move the notes, and click on a note to start typing text. Notes are saved in your browser's local storage, and are not stored by the website; they'll only appear on the computer or other device you are currently using.</p>
+
+<div id="app-buttons" class="button-stack"><button class='new'>New Note</button>
+    <button class='save'>Save Notes</button>
+    <button class='load'>Load Notes</button>
+    <label for="autosave">Autosave?</label>
+    <input type='checkbox' class='autosave' name="autosave">
+</div>
+    <div id="save-status">Saving...</div>
+    <div id="note-space"></div>
+    <script src="{% static 'notes.js' %}" defer></script>
+{% endblock %}

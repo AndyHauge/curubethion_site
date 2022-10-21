@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <h1>Javascript Apps</h1>
+    <p>Here's a handful of Javascript apps and experiments that I've worked on as I develop my knowledge!</p>
+    <ul>
+        <li><a href="{% url 'business-card' %}">Business Card</a> &mdash; generate, and then download, a business card that updates in realtime!</li>
+        <li><a href="{% url 'notes-app' %}">Sticky Notes</a> &mdash; take notes that you can move around and save, even after closing the browser! (local storage only)</li>
+    </ul>
+{% endblock %}

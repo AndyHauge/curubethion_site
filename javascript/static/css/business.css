@@ -1,0 +1,29 @@
+input {
+	font-family:'Lucida','Trebuchet MS',sans-serif;
+}
+
+.cardContainer {
+	min-height:20em;
+}
+
+.optionMenu ul {
+	list-style-type:none;
+	padding:.2em;
+}
+
+.optionMenu ul li {
+	padding:.2em;
+}
+
+#download {
+	text-decoration:none;
+	border:2px black solid;
+	padding:5px;
+	background-color:#dda670;
+	color:#13133d;
+}
+
+#download:hover {
+	background-color:#DD5555;
+	color:#FFFFFF;
+}

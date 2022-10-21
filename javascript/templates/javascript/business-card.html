@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/business.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+<p><a href="{% url 'js-landing' %}">back to Javascript apps</a></p>
+
+<h1>Make a Business Card!</h1>
+	<div class="cardContainer">
+		<canvas width="500" height="275">
+		</canvas>
+	</div><!--container to hold the generated card-->
+	<div class="optionMenu"><!--contains options for the card-->
+		<ul>
+		<li><label for="name">Your Name:</label>
+		<input type="text" id="name" name="name"></li>
+		<li><label for="business">Your Business:</label>
+		<input type="text" id="business" name="business"></li>
+		<li><label for="tagline">Business Tagline:</label>
+		<input type="text" id="tagline" name="tagline"></li>
+	</div>
+		<a href="" id="download" download="business-card">Download</a>
+	</div>
+<script src="{% static 'business.js' %}" defer></script>
+{% endblock %}

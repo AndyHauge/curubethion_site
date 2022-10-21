@@ -1,0 +1,77 @@
+/* override style from gallery */
+
+.button-stack {
+    margin-top:1em;
+    flex-direction:row;
+    align-items: center;
+}
+
+#save-status {
+    display:block;
+}
+
+textarea {
+	border:none;
+	box-shadow:none;
+	resize:none;
+}
+
+textarea:focus {
+	outline:none;
+	box-shadow:none;
+}
+
+#note-space {
+	min-height:40em;
+}
+
+.note {
+	padding: 5px;
+	border:5px solid #7777DD;
+	border-radius:5px;
+	min-width:100px;
+	position:absolute;
+	background-color:white;
+	z-index:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:left;
+	align-items:center;
+}
+
+.note textarea {
+	min-height:30%;
+	max-height:80%;
+	width:90%;
+}
+
+.delete-btn {
+	border:none;
+	background-color:#ffffff;
+	color:#5555FF;
+	font-weight:bold;
+	margin-left:110px
+}
+
+.delete-btn:hover {
+	cursor: pointer;
+}
+
+#save-status { /* Save text starts invisible until the save function is called */
+	opacity:0%;
+}
+
+#save-status.fadeout { /* Once class is applied, fade animation happens; fade is cleared in JS when animation ends */
+	animation:3s fadeout;
+}
+
+/* save text animation */
+@keyframes fadeout {
+	0% {
+		opacity: 100%;
+	}
+	
+	100% {
+		opacity: 0%;
+	}
+}

@@ -12,6 +12,7 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/mobile_styles.css' %}" media="all and (max-width: 480px)" type="text/css">
+        {% block styles %}<!--block to load additional styles for apps-->{% endblock %}
     </head>
     <body>
         <div class="wrapper">
@@ -24,6 +25,7 @@
                         {% for cat in categories %}
                         <li><a href="{% url 'category-list-view' name=cat.slug_name %}">{{ cat.display_name }}</a></li>
                         {% endfor %}
+                        <li><a href="{% url 'js-landing' %}">Javascript</a></li>
                     </ul>
                 </nav>
                 {% endblock %}
